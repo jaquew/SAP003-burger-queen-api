@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 const port = process.env.PORT || 3000
 
 app.get('*', (req, res) => res.status(200).send({
-   message: 'Esta é a API da nossa livraria.'
+   message: 'Esta é a API.'
 }))
 
 app.listen(port, () => {

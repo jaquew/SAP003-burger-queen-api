@@ -1,14 +1,14 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const products = sequelize.define('products', {
+  const product = sequelize.define('product', {
     name: DataTypes.TEXT,
-    price: DataTypes.INTEGER,
+    price: DataTypes.DECIMAL(10,2),
     type: DataTypes.TEXT,
     breakfast: DataTypes.BOOLEAN
   }, {});
-  products.associate = function(models) {
-    products.hasMany(models.items)
+  product.associate = function(models) {
+    product.hasMany(models.items)
     // associations can be defined here
   };
-  return products;
+  return product;
 };

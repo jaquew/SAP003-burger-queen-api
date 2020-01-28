@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.TEXT,
     price: DataTypes.DECIMAL(4,2),
     type: DataTypes.TEXT,
-    breakfast: DataTypes.BOOLEAN
+    bf: DataTypes.BOOLEAN
   }, {});
   product.associate = function(models) {
     product.hasMany(models.item)

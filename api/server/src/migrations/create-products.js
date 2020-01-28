@@ -17,7 +17,7 @@ module.exports = {
       type: {
         type: Sequelize.TEXT
       },
-      breakfast: {
+      bf: {
         type: Sequelize.BOOLEAN
       },
       createdAt: {

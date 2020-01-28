@@ -19,8 +19,7 @@ class ProductController {
     }
   }
   static async addProduct(req, res) {
-    console.log(req.body.name, req.body.is_alive)
-    if (!req.body.name || !req.body.is_alive ) {
+    if (!req.body.name || !req.body.price || !req.body.type || !typeof(req.body.breakfast)===Boolean) {
       util.setError(400, 'Please provide complete details')
       return util.send(res)
     }
@@ -80,6 +79,8 @@ class ProductController {
   }
 
   static async deleteProduct(req, res) {
+    console.log('oi');
+    
     const { id } = req.params
 
     if (!Number(id)) {

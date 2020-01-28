@@ -3,15 +3,15 @@ import database from '../src/models'
 class ProductService {
   static async getAllProducts() {
     try {
-      return await database.Product.findAll()
+      return await database.product.findAll()
     } catch (error) {
       throw error
     }
   }
 
   static async addProduct(newProduct) {
-    try {
-      return await database.Product.create(newProduct)
+    try {      
+      return await database.product.create(newProduct)
     } catch (error) {
       throw error
     }
@@ -19,12 +19,12 @@ class ProductService {
 
   static async updateProduct(id, updateProduct) {
     try {
-      const productToUpdate = await database.Product.findOne({
+      const productToUpdate = await database.product.findOne({
         where: { id: Number(id) }
       })
 
       if (productToUpdate) {
-        await database.Product.update(updateProduct, { where: { id: Number(id) } })
+        await database.product.update(updateProduct, { where: { id: Number(id) } })
 
         return updateProduct
       }
@@ -36,7 +36,7 @@ class ProductService {
 
   static async getProduct(id) {
     try {
-      const theProduct = await database.Product.findOne({
+      const theProduct = await database.product.findOne({
         where: { id: Number(id) }
       })
 
@@ -47,11 +47,11 @@ class ProductService {
   }
 
   static async deleteProduct(id) {
-    try {
-      const productToDelete = await database.Product.findOne({ where: { id: Number(id) } })
+    try {      
+      const productToDelete = await database.product.findOne({ where: { id: Number(id) } })
 
       if (productToDelete) {
-        const deletedProduct = await database.Product.destroy({
+        const deletedProduct = await database.product.destroy({
           where: { id: Number(id) }
         })
         return deletedProduct

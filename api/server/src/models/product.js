@@ -2,7 +2,7 @@
 module.exports = (sequelize, DataTypes) => {
   const product = sequelize.define('product', {
     name: DataTypes.TEXT,
-    price: DataTypes.DECIMAL(10,2),
+    price: DataTypes.DECIMAL(4,2),
     type: DataTypes.TEXT,
     breakfast: DataTypes.BOOLEAN
   }, {});

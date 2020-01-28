@@ -14,9 +14,6 @@ module.exports = {
       mesa: {
         type: Sequelize.INTEGER
       },
-      items: {
-        type: Sequelize.JSON
-      },
       total: {
         type: Sequelize.DECIMAL(10,2)
       },

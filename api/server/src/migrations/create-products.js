@@ -12,7 +12,7 @@ module.exports = {
         type: Sequelize.TEXT
       },
       price: {
-        type: Sequelize.DECIMAL(10,2)
+        type: Sequelize.DECIMAL(4,2)
       },
       type: {
         type: Sequelize.TEXT

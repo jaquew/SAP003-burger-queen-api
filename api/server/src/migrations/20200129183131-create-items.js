@@ -12,12 +12,18 @@ module.exports = {
         allowNull: true,
         type: Sequelize.TEXT
       },
-      id_product: {
+      additionalId:{
+        allowNull: true,
         type: Sequelize.INTEGER,
         references: {model: 'products', key: 'id'}
       },
-
-      id_order: {
+      productId: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: {model: 'products', key: 'id'}
+      },
+      orderId: {
+        allowNull: false,
         type: Sequelize.INTEGER,
         references: {model: 'orders', key: 'id'}
       },

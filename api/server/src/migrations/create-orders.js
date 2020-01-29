@@ -9,10 +9,15 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       status: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       mesa: {
+        allowNull: false,
         type: Sequelize.INTEGER
+      },
+      clientName:{
+        type: Sequelize.TEXT
       },
       total: {
         type: Sequelize.DECIMAL(10,2)

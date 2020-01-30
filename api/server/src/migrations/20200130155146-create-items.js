@@ -10,7 +10,7 @@ module.exports = {
       },
       option: {
         allowNull: true,
-        type: Sequelize.TEXT
+        type: Sequelize.STRING
       },
       additionalId:{
         allowNull: true,

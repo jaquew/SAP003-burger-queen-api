@@ -4,7 +4,6 @@ module.exports = (sequelize, DataTypes) => {
     status: DataTypes.STRING,
     mesa: DataTypes.INTEGER,
     clientName: DataTypes.TEXT,
-    total: DataTypes.DECIMAL(10,2)
   }, {});
   order.associate = function(models) {
     order.hasMany(models.item)

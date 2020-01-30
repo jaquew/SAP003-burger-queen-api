@@ -8,19 +8,16 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      status: {
+      status:{
         allowNull: false,
         type: Sequelize.STRING
       },
-      mesa: {
+      mesa:{
         allowNull: false,
         type: Sequelize.INTEGER
       },
-      clientName:{
-        type: Sequelize.TEXT
-      },
-      total: {
-        type: Sequelize.DECIMAL(10,2)
+      clientName: {
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,

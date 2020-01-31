@@ -7,7 +7,8 @@ module.exports = (sequelize, DataTypes) => {
     orderId: DataTypes.INTEGER
   }, {});
   item.associate = function(models) {
-    // associations can be defined here
+    item.belongsTo(models.product)
+    item.belongsTo(models.order)
   };
   return item;
 };

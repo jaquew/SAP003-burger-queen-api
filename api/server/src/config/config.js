@@ -5,7 +5,7 @@ module.exports = {
     "database": "jwburgerqueen_development",
     "host": "db",
     "dialect": "postgres",
-    "operatorsAliases": false
+    "operatorsAliases": 0
   },
   "test": {
     "username": "postgres",
@@ -13,7 +13,7 @@ module.exports = {
     "database": "jwburgerqueen_test",
     "host": "db",
     "dialect": "postgres",
-    "operatorsAliases": false
+    "operatorsAliases": 0
   },
   "production": {
     "username": "postgres",
@@ -21,6 +21,6 @@ module.exports = {
     "database": "jwburgerqueen_production",
     "host": "db",
     "dialect": "postgres",
-    "operatorsAliases": false
+    "operatorsAliases": 0
   }
 }

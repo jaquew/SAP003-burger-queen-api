@@ -19,7 +19,7 @@ const getAllOrders = async (req, res) => {
   }
 }
 const addOrder = async (req, res) => {
-  if (!req.body.status || !req.body.mesa || !req.body.clientName) {
+  if (!req.body.mesa) {
     util.setError(400, 'Please provide complete details')
     return util.send(res)
   }

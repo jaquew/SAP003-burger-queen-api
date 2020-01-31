@@ -3,6 +3,7 @@ import bodyParser from 'body-parser'
 import productRoutes from './server/routes/ProductRoutes'
 import orderRoutes from './server/routes/OrderRoutes'
 import itemRoutes from './server/routes/ItemRoutes'
+// import tableRoutes from './server/routes/TableRoutes'
 
 const app = express()
 app.use(bodyParser.json())
@@ -13,6 +14,8 @@ const port = process.env.PORT || 3000
 app.use('/api/orders', orderRoutes)
 app.use('/api/products', productRoutes)
 app.use('/api/items', itemRoutes)
+
+// app.use('/api/tables', tableRoutes)
 
 
 app.get('*', (req, res) => res.status(200).send({

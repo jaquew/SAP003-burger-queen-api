@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
   "development": {
     "username": "postgres",
@@ -16,11 +18,14 @@ module.exports = {
     "operatorsAliases": 0
   },
   "production": {
-    "username": "postgres",
-    "password": null,
-    "database": "jwburgerqueen_production",
-    "host": "db",
+    "username": process.env.DB_USER,
+    "password": process.env.DB_PASS,
+    "database": process.env.DB_DATABASE,
+    "host": process.env.DB_HOST,
     "dialect": "postgres",
-    "operatorsAliases": 0
+    "operatorsAliases": 0,
+    "dialectOptions": {
+      "ssl": 1
+    }
   }
 }

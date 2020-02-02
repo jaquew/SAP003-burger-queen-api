@@ -1,2 +1,8 @@
 node_modules
 .env
+
+
+# export NODE_ENV=production && npx sequelize-cli db:migrate
+# psql -h 127.0.0.1 -U postgres
+# docker-compose run dev npx sequelize-cli db:migrate
+# git push heroku master

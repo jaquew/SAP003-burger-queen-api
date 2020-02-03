@@ -3,7 +3,7 @@ module.exports = (sequelize, DataTypes) => {
   const order = sequelize.define('order', {
     status: DataTypes.STRING,
     mesa: DataTypes.INTEGER,
-    clientName: DataTypes.TEXT,
+    clientName: DataTypes.STRING,
   }, {});
   order.associate = function(models) {
     order.hasMany(models.item)

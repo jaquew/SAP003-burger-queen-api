@@ -9,7 +9,6 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       status:{
-        allowNull: false,
         type: Sequelize.STRING,
         defaultValue:"Em preparo"
       },
